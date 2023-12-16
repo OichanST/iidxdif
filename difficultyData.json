@@ -1,0 +1,2647 @@
+﻿const difficultyData = [
+	{
+		DIF:"地力S+",
+		TITLE:"GuNGNiR",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"Illegal Function Call",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"KAMAITACHI",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"Mare Nectaris",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"n/a",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"Sigmund",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"The Limbo",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"Verflucht",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"卑弥呼",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S+",
+		TITLE:"疾風迅雷",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"DIAVOLO",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"Plan 8",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"RAGE feat.H14 of LEONAIR",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"SAMURAI-Scramble",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"灼熱 Pt.2 Long Train Running",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S+",
+		TITLE:"灼熱Beach Side Bunny",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Binary Black Hole",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Carmina",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Chrono Diver -PENDULUMs-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Confiserie",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Elemental Creation",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"EMERALDAS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Everlasting Message",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Go Ahead!!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"GO OVER WITH GLARE -ROOTAGE 26-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"hard-wired",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"ICARUS",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"IX",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"KAISER PHOENIX",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"MEGAERA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Override",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"perditus†paradisus",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Phoenix",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Sigmund",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"Sinus Iridum",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"TRANOID",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"X-DEN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"お米の美味しい炊き方、そしてお米を食べることによるその効果。",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"共鳴遊戯の華",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"千年ノ理",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"嘆きの樹",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"焔極OVERKILL",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力S",
+		TITLE:"駅猫のワルツ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"BroGamer",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"ECHIDNA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"EROICA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"Lords Of The Roundtable",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"Time to Air",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"Timepiece phase II (CN Ver.)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"WHA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差S",
+		TITLE:"ディスコルディア",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"-65℃",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"[ ]DENTITY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Almagest",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Ancient Scapes",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Anisakis -somatic mutation type\"Forza\"-",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"B4U(BEMANI FOR YOU MIX)",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Bad Encryption",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Blue Spring Express",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"CHRONO DIVER -NORNIR-",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"CONTRACT",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Dans la nuit de l'eternite",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"EBONY & IVORY",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Ignis†Irae",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Initiation",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"LOUDER ROLLING THUNDER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"NZM",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"PARADISE LOST",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Quakes",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"REVOLVER",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"Smashing Wedge",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"The Clown of 24stairs",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"THE F∀UST",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"VANESSA",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"∀",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"がっつり陰キャ!? 怪盗いいんちょの億劫^^;",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"シムルグの目醒め",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"デモーニッシュ",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A+",
+		TITLE:"煉獄のエルフェリア",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"BLACK.by X-Cross Fade",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"invoker",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Level 3",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Level 4",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Red. by Jack Trance",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Reflux",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"SCREW // owo // SCREW",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"The Chase",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"THE PEERLESS UNDER HEAVEN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Thor's Hammer",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"TITANS RETURN",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"TOMAHAWK",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"Zirkfied",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"ピアノ独奏無言歌 \"灰燼\"",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A+",
+		TITLE:"真 地獄超特急 -HELL or HELL-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"255",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"ABSOLUTE EVIL",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"ALTERNATOR",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Artist",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Bad Maniacs",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"BEAT PRISONER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"BLACK or WHITE?",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Blue Rain",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Close the World feat.a☆ru",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"COSMIC RAY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"DEATH†ZIGOQ ～怒りの高速爆走野郎～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Despair of ELFERIA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Devil's Gear",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"DORNWALD ～Junge～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Dynamite",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"EXUSIA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Feel The Beat",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"G59",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Ganymede",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"GuNGNiR",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"HADES",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"HAERETICUS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"KAISER PHOENIX",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Life Is A Game ft.DD\"ナカタ\"Metal",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"LOCUS OF THE TRAVEL",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"MENDES",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Painful Fate",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"quell～the seventh slave～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Secrets",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"SOLID STATE SQUAD",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"THE BRAVE MUST DIE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"The Rebellion of Sequencer",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Tiempo Loco",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Triple Counter",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"TRIUMPH",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"Verflucht",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"VOLAQUAS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"voltississimo",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"waxing and wanding",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"ZEPHYRANTHES",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"お菓子の王国",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"ピアノ協奏曲第1番”蠍火” (BlackY Remix)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"世界の果てに約束の凱歌を -ReUnion-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"二人ノ廃城幽踊宴",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"仮想空間の旅人たち",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"伐折羅-vajra-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"冥",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"君のハートにロックオン",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"天空の夜明け",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"烽火連天の刃",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"華麗なる大犬円舞曲",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"超青少年ノ為ノ超多幸ナ超古典的超舞曲",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"金野火織の金色提言",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力A",
+		TITLE:"閠槞彁の願い",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"199024club -Re:BounceKiller-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"2 Beasts Unchained",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"3y3s",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"AIR RAID FROM THA UNDAGROUND",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"Don't believe the hype",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"Level One",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"Purple Perplex",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"Scripted Connection⇒ A mix",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"STEEL NEEDLE",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"TECHNOPHOBIA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"バッド・スイーツ、バッド・ドリーム",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"ピアノ協奏曲第１番”蠍火”",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差A",
+		TITLE:"音楽",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"ANCHOR",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Antigravity",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"DEADHEAT",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Empire of Fury",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"fallen leaves -IIDX edition-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Grand Chariot",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"GRAVITON",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"JOMANDA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Macho Monky",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"NEW GENERATION -もう、お前しか見えない-",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"One More Lovely",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"ORCA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Shooting Fireball",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Skreaming for Salvation",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Snakey Kung-fu",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"STARLIGHT DANCEHALL",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"StrayedCatz",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"SYNC-ANTHEM",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"The Limbo",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"TOXIC VIBRATION",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Twelfth Style",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Unbelief",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"Visterhv",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"YAKSHA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"†渚の小悪魔ラヴリィ～レイディオ†(IIDX EDIT)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"キャトられ恋はモ～モク",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"抱きしめてモナムール",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"東京神話",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B+",
+		TITLE:"津軽雪",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Be quiet",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Boomy and The Boost",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"DIAMOND CROSSING",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"GiGaGaHell",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Hollywood Galaxy",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Inferno of Fomalhaut",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Peaktime Booster",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"Snake Stick",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"STULTI",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"水鏡の異界",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B+",
+		TITLE:"焱影",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"#MAGiCVLGiRL_TRVP_B3VTZ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"AA -rebuild-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Angel's Ladder",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Arkadia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"BITTER CHOCOLATE STRIKER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"BLUE DRAGON(雷龍RemixIIDX)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Broken Sword",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Burning Flame",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Candy Galy",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"cinder",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Close the World feat.a☆ru",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"CODE:1 [revision1.0.1]",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Colorful Cookie",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Dances with Snow Fairies",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Devilz Staircase",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"DropZ-Line-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"DUAL STRIKER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"entelecheia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Flying Castle",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"GENE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"HARD BRAIN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"I",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Illusionary Waterlily",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"INSOMNIA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"KILL EACH OTHER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"LASER CRUSTER (IGNITE REMIX)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Little Little Princess",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"M4K3 1T B0UNC3",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Monopole.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"neu",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"NITROUS CANNON",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"One for All",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"OTENAMI Hurricane",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Proof of the existence",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"QUANTUM TELEPORTATION",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"quaver♪",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"ra'am",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"refrain",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"reunion",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"ruin of opals",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Session 9 -Chronicles-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Sky High",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Slipstream",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Smalt #28598F",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Super Rush",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"T-REX vs Velociraptor (In the Far east euphoria)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"THE DEEP STRIKER",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Timepiece phase II",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Triple Cross",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Ubertreffen",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Valanga",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Vitrum",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Welcome",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"X",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Xlo",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"Xperanza",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"ΕΛΠΙΣ",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"たまゆら",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"リリーゼと炎龍レーヴァテイン",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"不沈艦CANDY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"儚キ戀ノ幻想譚",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"少年は空を辿る",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"廿",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"神謳 -RESONANCE-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"童話回廊",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"轟け！恋のビーンボール！！",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"魅惑のYUMMYスイーツ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力B",
+		TITLE:"龍と少女とデコヒーレンス",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"AO-1",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"FAKE TIME",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Flashes",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"IMPLANTATION",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Marie Antoinette",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Papilio ulysses",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"PARANOiA ～HADES～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Red. by Full Metal Jacket",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"VOX UP",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Watch Out Pt.2",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"Y&Co. is dead or alive",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"アストライアの双皿",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"ミラージュ・レジデンス",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"逆月",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差B",
+		TITLE:"雪上断火",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Aftermath",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"AKASHIC BREAK",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Amazing Mirage",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Ancient Scapes",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"anthracene",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Arabian Rave Night",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Cosmic Cat",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"DARK LEGACY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"dAuntl3ss",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"DAY DREAM",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"DOMINION",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Dr. Chemical & Killing Machine",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"EBONY & IVORY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Evans",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"FANTASTIC THREE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Friction[!]Function",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"FUZIN RIZIN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Godspeed",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"GOLDEN CROSS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Gravigazer",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Idola",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"innocent revolver",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Invitation from Mr.C",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Konzert V",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"L.F.O",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Last Dance",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Lethal Weapon",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"LIVE DRIVING!! feat. 花たん",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"LOST TECHNOLOGIE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"NEO GENERATOR SEVEN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Nightmare before oversleep",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"NNRT",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Ou Legends",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Push on Beats!～音ゲの国のeX-ストリーマー～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"rage against usual",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"RAIN",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Rave Patroller",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"RINNE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"rommmo",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"SAY BAY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Sol Cosine Job 2",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"SOLID STATE SQUAD -RISEN RELIC REMIX-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Sounds Of Summer",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"spiral galaxy",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Super Freak",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"TECHNO Style Essentials",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"THANK YOU FOR PLAYING",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"THE DAY OF JUBILATIONS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"thunder HOUSE NATION Remix",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Vinculum stellarum",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Viridian",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"We're so Happy (P*Light Remix) IIDX ver.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"WONDER WALKER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"Ypsilon",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"それは花火のような恋",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"めいさいアイドル☆あいむちゃん♪",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"イザナミノナゲキ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"シュレーディンガーの猫",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"トリカゴノ鳳凰",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"夏色DIARY - L.E.D.-G STYLE MIX -",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"子供の落書き帳",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"恋愛＝精度×認識力",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"旋律のドグマ ～Misérables～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"深淵に捧ぐレクイエム",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"疾風迅雷",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"禊",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"華爛漫 -Flowers-",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力C",
+		TITLE:"龍王の霊廟(Mausoleum Of The Primal Dragon)",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"Adularia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"B.O.D.Y.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"BLUE MIRAGE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"Level 2",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"New Castle Legions",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"ONIGOROSHI",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"Rave*it!! Rave*it!!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"Sense 2007",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"TOGAKUSHI",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"ZZ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"スーパー戦湯ババンバーン",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"ハイテックトキオ",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差C",
+		TITLE:"海神",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"AA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"ALBIDA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Beat Radiance",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"BIGソムタム",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Broken",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Catch Our Fire!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Double Dribble",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Drastic Dramatic",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"DRUNK MONKY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"EVANESCENT",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Feel The Beat",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Fegrix",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"fffff",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"FIRE FIRE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"GAIA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Highcharge Divolt",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Kung-fu Empire",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Matt Silver",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Megalara Garuda",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Meissa",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"No Border",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"ONE AND ONLY",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"oratio",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Parvati",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Persephone",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"POSSESSION",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"PUNISHER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Rampage",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Rave Cannon",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Say YEEEAHH",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Scripted Connection⇒ A mix",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Silver Bullet",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"SOLID STATE SQUAD",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"SpaceLand☆TOYBOX",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"The Least 100sec",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"The Sampling Paradise",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Thunderbolt",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"TIEFSEE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Trill auf G",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"True Blue",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"Umbral",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"V",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"〆",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"カゴノトリ～弐式～",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"九尾狐夜行",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"刃図羅",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"即席！脳直★ミュージックシステム",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"天邪鬼",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"恋する☆宇宙戦争っ！！",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"最小三倍完全数",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"狂イ咲ケ焔ノ華",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"紫陽花 -AZISAI-",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"聖人の塔",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"表裏一体！？怪盗いいんちょの悩み",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力D",
+		TITLE:"電人、暁に斃れる。",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"Caterpillar",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"dica dica",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"eRAseRmOToRpHAntOM",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"Fascination MAXX",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"Fire Beat",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"mosaic",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"PLEASE DON'T GO",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"ワルツ第17番 ト短調”大犬のワルツ”",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差D",
+		TITLE:"魔法のかくれんぼ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Apocalypse",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Arca",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Carry Me Away",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Colors (radio edit)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Concertino in Blue",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"encounter",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"F",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"gigadelic",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"gigadelic",
+		SCORE:"HYPER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Go Beyond!!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Hat Surprise (Season 2)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"invoker",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"LASER CRUSTER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Liberation",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"LIGHTNING STRIKES",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Little Star",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"moon_child",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"NINJA IS DEAD IIDX ver.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Please Welcome Mr.C",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Raspberry Railgun",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"RED ZONE",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Summerlights(IIDX Edition)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Sweet Clapper",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Symmetry",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Todestrieb",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"VANESSA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"Venom",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"ΕΛΠΙΣ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"千年ノ理",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"少年A",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"紅牡丹",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力E",
+		TITLE:"黒髪乱れし修羅となりて",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"DUE TOMORROW",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"GRID KNIGHT",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"ICARUS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"Innocent Walls",
+		SCORE:"HYPER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"Innocent Walls",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"one or eight",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"SCREAM SQUAD",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"Steel Edge",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"TROOPERS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"桜",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"個人差E",
+		TITLE:"雪月花",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"A",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"Primitive Vibes",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"Ristaccia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"sakura storm",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"snow storm",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"地力F",
+		TITLE:"SPECIAL SUMMER CAMPAIGN!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"#CMFLG",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"24h Endurance Race",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Always We Trust In You",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"ATHER",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"Beyond Evolution",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"BIGWAVERS",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Chaotoxin",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"CODE:0",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"Dahlia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Dances with Snow Fairies",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"Elektrick U-Phoria",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"four pieces of heaven",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"frequent",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"GAME ON",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Ghost Pulse",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"glacia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"kors k's How to make OTOGE CORE 「LONG」",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"MAX 300",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"MAX 360",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Out of Control",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Sirius",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"SOLAR ECLIPSE",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Somnidiscotheque",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"suspicions",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Vermilion Carol",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Violet Pulse",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"VØID",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Xerulean",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"yellow head joe",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"《PL|RAYER》",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"ぞうしょく！？マイデンティティ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"恋する☆宇宙戦争っ！！",
+		SCORE:"LEGGENDARIA"
+	},
+	{
+		DIF:"",
+		TITLE:"摩天楼",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"栄冠のカンパネラ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"神のシナリオ",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"終焔のClaudia",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"電光",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"ALL OK!!",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"BLAZING_LAZAR",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"ELECTRIC MASSIVE DRIVER",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Immortal",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Ludus In Tenebris",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"Remain",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"tripping contact",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"TSAR BOMBA",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"1116",
+		SCORE:"ANOTHER"
+	},
+	{
+		DIF:"",
+		TITLE:"3y3s(Long ver.)",
+		SCORE:"ANOTHER"
+	}
+];

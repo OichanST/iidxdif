@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>★12難易度表編集</title>
+		<script type="text/javascript" src="./difficultyData.json"></script>
+	</head>
+	<style type="text/css">
+		.dif{
+			cursor:pointer;
+			width:100%;
+			font-size:1.4em;
+			margin:3px;
+			padding:3px 10px 3px 10px;
+			text-align:center;
+			border:1px solid black;
+			border-radius:5px;
+		}
+		.active{
+			background-color:yellow;
+		}
+		.header{
+			text-align:center;
+			font-weight:bold;
+		}
+		.music{
+			font-size:1.1em;
+			margin:3px;
+			padding:3px 0px 3px 8px;
+			border:1px solid black;
+			cursor:pointer;
+			text-shadow:
+			  1px 1px 0 black;
+			background:rgba(200, 200, 200, 0.25);
+		}
+		.HYPER{
+			color:#fFFF00;
+		}
+		.ANOTHER{
+			color:#FF0000;
+		}
+		.LEGGENDARIA{
+			color:#FF00FF;
+		}
+	</style>
+	<script>
+		// 各難度別のマップ
+		var dataMap;
+		// 難易度未決データリスト
+		var unClassedData;
+		/**
+		 * 初期表示処理
+		 */
+		function init(){
+		
+			dataMap = localStorage.getItem("dataMap");
+			
+			unClassedData = localStorage.getItem("unClassedData");
+			
+			if(!dataMap && !unClassedData){
+				dataMap = {};
+				unClassedData = new Array();
+				// 曲データを難易度に振り分け
+				for(let i = 0; i < difficultyData.length; i++){
+					// 要素取得
+					const data = difficultyData[i];
+					// 難易度未決
+					if(data.DIF == ""){
+						// 未決データへの追加
+						unClassedData.push(data);
+					// それ以外
+					}else{
+						// マップ初期化
+					 	if(!dataMap[data.DIF]){
+					 		dataMap[data.DIF] = new Array();
+					 	}
+					 	// 特定難易度への振り分け
+						dataMap[data.DIF].push(data);
+					}
+				}
+				
+				save();
+				
+			}else{
+				
+				if(dataMap){
+					dataMap = JSON.parse(dataMap);
+				}
+				if(unClassedData){
+					unClassedData = JSON.parse(unClassedData);
+				}
+			}
+
+			// 各難易度の詳細表示領域取得
+			const rArea = document.getElementById("rArea");
+			// 難易度別マップをループ
+			for(let dif in dataMap){
+				// 曲のセル作成
+				const dv = document.createElement("div");
+				// ドラッグ開始時イベント追加
+				dv.ondragover = dragoverHandler;
+				// ドロップイベント追加
+				dv.ondrop = (evt) => {
+					// デフォルト動作の抑制
+					evt.preventDefault();
+					// ドラッグ元データ取得
+					const data = JSON.parse(event.dataTransfer.getData("text/plain"));
+					// 難易度未決データの場合
+					if(data.DIF == ""){
+						// 未決データリストから該当データを削除
+						for(let i = 0; i < unClassedData.length; i++){
+							if(unClassedData[i].TITLE == data.TITLE && unClassedData[i].SCORE == data.SCORE){
+								unClassedData.splice(i, 1);
+								break;
+							}
+						}
+						// 未決データの表示更新
+						setUnclassedData();
+						// ドラッグ元データの難易度をドロップ先に変更
+						data.DIF = evt.target.innerText;
+						// 難易度別マップに追加
+						dataMap[evt.target.innerText].push(data);
+						// 選択済の難易度へ追加された場合
+						if(evt.target.classList.contains("active")){
+							// クリックイベントを発生（これにより左表示領域をリロード）
+							evt.target.click();
+						}
+					// 難易度付与済のデータの場合
+					}else{
+						// 付与されている難易度を取得
+						const dif = data.DIF;
+						// 難易度マップから該当データを取得
+						const mList = dataMap[dif];
+						// 対応するデータを削除
+						for(let i = 0; i < mList.length; i++){
+							if(mList[i].TITLE == data.TITLE && mList[i].SCORE == data.SCORE){
+								mList.splice(i, 1);
+								break;
+							}
+						}
+						// 難易度マップの内容を更新（多分冗長だが念のため）
+						dataMap[dif] = mList;
+						// ドラッグ元のデータの難易度の書き換え
+						data.DIF = evt.target.innerText;
+						// ドロップ先の難易度のマップに追加
+						dataMap[evt.target.innerText].push(data);
+						// 左表示領域をリロード
+						reloadR();
+					}
+				}
+				// クラス追加
+				dv.classList.add("dif");
+				// 表記設定
+				dv.innerText = dif;
+				// クリックイベント追加
+				dv.onclick = (evt) => {
+					// 右表示領域にある難易度表記を取得
+					const dList = document.getElementById("rArea").getElementsByTagName("div");
+					// アクティブ状態を解除
+					for(let i = 0; i < dList.length; i++){
+						dList[i].classList.remove("active");
+					}
+					// クリックされた行をアクティブにする
+					evt.target.classList.add("active");
+					// クリックされた難易度を取得
+					const dif = evt.target.innerText;
+					// タイトルの書き換え
+					document.getElementById("lTitle").innerText = dif;
+					// 左表示領域を取得
+					const lArea = document.getElementById("lArea");
+					// 出力内容のクリア
+					lArea.innerHTML = null;
+					// 難易度別マップからクリックされた難易度の曲リストを取得
+					const mList = dataMap[evt.target.innerText];
+					// 曲リストループ
+					for(let i = 0; i < mList.length; i++){
+						// セル作成
+						const dv = document.createElement("div");
+						// 属性などを設定
+						dv.setAttribute("draggable", true);
+						dv.setAttribute("title", mList[i].TITLE);
+						dv.setAttribute("score", mList[i].SCORE);
+						// CSS用クラス設定
+						dv.classList.add("music");
+						dv.classList.add(mList[i].SCORE);
+						// テキスト設定
+						dv.innerText = mList[i].TITLE + "(" + mList[i].SCORE + ")";
+						// ドラックイベント追加
+						dv.ondragstart = (evt) =>{
+							// ドラッグ開始時の挙動設定
+						    evt.dataTransfer.effectAllowed = "move";
+						    // ドラッグ元データをdataTransferに設定
+						    // ※JSONをserializeして文字列化する
+							evt.dataTransfer.setData("text/plain", 
+								JSON.stringify({
+									DIF:dif,
+									TITLE:evt.target.getAttribute("title"),
+									SCORE:evt.target.getAttribute("score")
+								})
+							);
+						}
+						// 左表示領域に曲を追加
+						lArea.appendChild(dv);
+					}
+				}
+				// 右表示領域に追加
+				rArea.appendChild(dv);
+			}
+			// 未決リストの描画
+			setUnclassedData();
+			// 先頭をクリックする
+			document.getElementById("rArea").getElementsByTagName("div")[0].click();
+		}
+		/**
+		 * 未決リスト描画
+		 */
+		function setUnclassedData(){
+			// 中央エリアの表示領域取得
+			const mArea = document.getElementById("mArea");
+			// 表示内容をクリア
+			mArea.innerHTML = null;
+			// 未決リストループ
+			for(let i = 0; i < unClassedData.length; i++){
+				// セル作成
+				const dv = document.createElement("div");
+				// 属性などを設定
+				dv.setAttribute("draggable", true);
+				dv.setAttribute("title", unClassedData[i].TITLE);
+				dv.setAttribute("score", unClassedData[i].SCORE);
+				// CSS用クラス設定
+				dv.classList.add("music");
+				dv.classList.add(unClassedData[i].SCORE);
+				// 表記設定
+				dv.innerText = unClassedData[i].TITLE + "(" + unClassedData[i].SCORE + ")";
+				// ドラッグ開始時イベント追加
+				dv.ondragstart = (evt) =>{
+					// ドラッグ開始時の挙動設定
+				    evt.dataTransfer.effectAllowed = "move";
+				    // ドラッグ元データをdataTransferに設定
+				    // ※JSONをserializeして文字列化する
+					evt.dataTransfer.setData("text/plain", 
+						JSON.stringify({
+							DIF:"",
+							TITLE:evt.target.getAttribute("title"),
+							SCORE:evt.target.getAttribute("score")
+						})
+					);
+				}
+				// 中央表示領域へ追加
+				mArea.appendChild(dv);
+			}
+		}
+		/**
+		 * 右表示領域をリロード
+		 */
+		function reloadR(){
+			// 左表示領域取得
+			const rArea = document.getElementById("rArea");
+			// 難易度別リスト取得
+			const rList = rArea.getElementsByTagName("div");
+			// リストループ
+			for(let i = 0; i < rList.length; i++){
+				// アクティブなセルの場合
+				if(rList[i].classList.contains("active")){
+					// クリック→左表示領域がリセットされる
+					rList[i].click();
+				}
+			}
+		}
+		/**
+		 * ドラッグ中イベント
+		 * ※evetn.preventDefault用
+		 */
+		function dragoverHandler(){
+			event.preventDefault();
+			event.dataTransfer.dropEffect = "move";
+		}
+		/**
+		 * 未決リスト領域へのドロップ時のイベント
+		 */
+		function dropUnclassedHandler(){
+			// デフォルト挙動を抑制
+			event.preventDefault();
+			// ドラッグ元データの取得
+			const data = JSON.parse(event.dataTransfer.getData("text/plain"));
+			// 未決データでない場合　※未決→未決については何もしない
+			if(data.DIF != ""){
+				// ドラッグ元データの難易度を取得
+				const dif = data.DIF;
+				// マップから対応する曲リストを取得
+				const mList = dataMap[dif];
+				// リストループ
+				for(let i = 0; i < mList.length; i++){
+					// 対応するデータの場合
+					if(mList[i].TITLE == data.TITLE && mList[i].SCORE == data.SCORE){
+						// 削除
+						mList.splice(i, 1);
+						// 以後処理不要
+						break;
+					}
+				}
+				// 難易度マップの更新
+				dataMap[dif] = mList;
+				// ドラッグ元データの難易度を未決にする
+				data.DIF = "";
+				// 未決データリストに追加
+				unClassedData.push(data);
+				// 未決表示の再描画
+				setUnclassedData();
+				// 左表示領域の更新
+				reloadR();
+			}
+		}
+		/**
+		 * 左表示領域へのドロップ時のイベント
+		 */
+		function dropClassedHandler(){
+			// ドラッグ元データ取得
+			const data = JSON.parse(event.dataTransfer.getData("text/plain"));
+			// 未決データからのドラッグ＆ドロップ
+			// ※各難易度からのドロップについては何もする必要なし
+			if(data.DIF == ""){
+				// 未決データからドラッグされたデータを削除
+				for(let i = 0; i < unClassedData.length; i++){
+					if(unClassedData[i].TITLE == data.TITLE && unClassedData[i].SCORE == data.SCORE){
+						unClassedData.splice(i, 1);
+						break;
+					}
+				}
+				// 未決データの表示更新
+				setUnclassedData();
+				// ドロップ先の難易度に変更
+				data.DIF = document.getElementById("lTitle").innerText;
+				// 難易度表マップへ追加
+				dataMap[evt.target.innerText].push(data);
+				// 左表示領域のリロード
+				reloadR();
+			}
+		}
+		
+		function save(){
+		
+			localStorage.setItem("dataMap", JSON.stringify(dataMap));
+			
+			localStorage.setItem("unClassedData", JSON.stringify(unClassedData));
+		}
+	</script>
+	<body onload="init();" style="user-select:none;">
+		<div style="display:flex;justify-content:flex-start;">
+			<div style="width:35%;">
+				<div id="lTitle" class="header"></div>
+				<div id="lArea" style="height:calc(100vh - 4em);overflow-y:scroll;" ondrop="dropClassedHandler();"></div>
+			</div>
+			<div style="width:35%;" ondragover="dragoverHandler();" ondrop="dropUnclassedHandler();">
+				<div class="header">未決</div>
+				<div id="mArea" style="height:calc(100vh - 4em);overflow-y:scroll;"></div>
+			</div>
+			<div style="width:28%;">
+				<div id="rArea">
+				</div>
+				<div style="width:100%;text-align:center;padding-top:8px;">
+					<button type="button" onclick="save();" style="font-size:1.3em;background-color:white;border-radius:8px;width:4em;">保存</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
