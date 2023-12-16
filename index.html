@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-		<title>š12“ïˆÕ“x•\•ÒW</title>
+		<title>â˜…12é›£æ˜“åº¦è¡¨ç·¨é›†</title>
+		<meta charset="UTF-8"/>
 		<script type="text/javascript" src="./difficultyData.json"></script>
 	</head>
 	<style type="text/css">
@@ -43,12 +44,12 @@
 		}
 	</style>
 	<script>
-		// Še“ï“x•Ê‚Ìƒ}ƒbƒv
+		// å„é›£åº¦åˆ¥ã®ãƒãƒƒãƒ—
 		var dataMap;
-		// “ïˆÕ“x–¢Œˆƒf[ƒ^ƒŠƒXƒg
+		// é›£æ˜“åº¦æœªæ±ºãƒ‡ãƒ¼ã‚¿ãƒªã‚¹ãƒˆ
 		var unClassedData;
 		/**
-		 * ‰Šú•\¦ˆ—
+		 * åˆæœŸè¡¨ç¤ºå‡¦ç†
 		 */
 		function init(){
 		
@@ -59,21 +60,21 @@
 			if(!dataMap && !unClassedData){
 				dataMap = {};
 				unClassedData = new Array();
-				// ‹Èƒf[ƒ^‚ğ“ïˆÕ“x‚ÉU‚è•ª‚¯
+				// æ›²ãƒ‡ãƒ¼ã‚¿ã‚’é›£æ˜“åº¦ã«æŒ¯ã‚Šåˆ†ã‘
 				for(let i = 0; i < difficultyData.length; i++){
-					// —v‘fæ“¾
+					// è¦ç´ å–å¾—
 					const data = difficultyData[i];
-					// “ïˆÕ“x–¢Œˆ
+					// é›£æ˜“åº¦æœªæ±º
 					if(data.DIF == ""){
-						// –¢Œˆƒf[ƒ^‚Ö‚Ì’Ç‰Á
+						// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã¸ã®è¿½åŠ 
 						unClassedData.push(data);
-					// ‚»‚êˆÈŠO
+					// ãã‚Œä»¥å¤–
 					}else{
-						// ƒ}ƒbƒv‰Šú‰»
+						// ãƒãƒƒãƒ—åˆæœŸåŒ–
 					 	if(!dataMap[data.DIF]){
 					 		dataMap[data.DIF] = new Array();
 					 	}
-					 	// “Á’è“ïˆÕ“x‚Ö‚ÌU‚è•ª‚¯
+					 	// ç‰¹å®šé›£æ˜“åº¦ã¸ã®æŒ¯ã‚Šåˆ†ã‘
 						dataMap[data.DIF].push(data);
 					}
 				}
@@ -90,106 +91,106 @@
 				}
 			}
 
-			// Še“ïˆÕ“x‚ÌÚ×•\¦—Ìˆææ“¾
+			// å„é›£æ˜“åº¦ã®è©³ç´°è¡¨ç¤ºé ˜åŸŸå–å¾—
 			const rArea = document.getElementById("rArea");
-			// “ïˆÕ“x•Êƒ}ƒbƒv‚ğƒ‹[ƒv
+			// é›£æ˜“åº¦åˆ¥ãƒãƒƒãƒ—ã‚’ãƒ«ãƒ¼ãƒ—
 			for(let dif in dataMap){
-				// ‹È‚ÌƒZƒ‹ì¬
+				// æ›²ã®ã‚»ãƒ«ä½œæˆ
 				const dv = document.createElement("div");
-				// ƒhƒ‰ƒbƒOŠJnƒCƒxƒ“ƒg’Ç‰Á
+				// ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹æ™‚ã‚¤ãƒ™ãƒ³ãƒˆè¿½åŠ 
 				dv.ondragover = dragoverHandler;
-				// ƒhƒƒbƒvƒCƒxƒ“ƒg’Ç‰Á
+				// ãƒ‰ãƒ­ãƒƒãƒ—ã‚¤ãƒ™ãƒ³ãƒˆè¿½åŠ 
 				dv.ondrop = (evt) => {
-					// ƒfƒtƒHƒ‹ƒg“®ì‚Ì—}§
+					// ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå‹•ä½œã®æŠ‘åˆ¶
 					evt.preventDefault();
-					// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^æ“¾
+					// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿å–å¾—
 					const data = JSON.parse(event.dataTransfer.getData("text/plain"));
-					// “ïˆÕ“x–¢Œˆƒf[ƒ^‚Ìê‡
+					// é›£æ˜“åº¦æœªæ±ºãƒ‡ãƒ¼ã‚¿ã®å ´åˆ
 					if(data.DIF == ""){
-						// –¢Œˆƒf[ƒ^ƒŠƒXƒg‚©‚çŠY“–ƒf[ƒ^‚ğíœ
+						// æœªæ±ºãƒ‡ãƒ¼ã‚¿ãƒªã‚¹ãƒˆã‹ã‚‰è©²å½“ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤
 						for(let i = 0; i < unClassedData.length; i++){
 							if(unClassedData[i].TITLE == data.TITLE && unClassedData[i].SCORE == data.SCORE){
 								unClassedData.splice(i, 1);
 								break;
 							}
 						}
-						// –¢Œˆƒf[ƒ^‚Ì•\¦XV
+						// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã®è¡¨ç¤ºæ›´æ–°
 						setUnclassedData();
-						// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚Ì“ïˆÕ“x‚ğƒhƒƒbƒvæ‚É•ÏX
+						// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã®é›£æ˜“åº¦ã‚’ãƒ‰ãƒ­ãƒƒãƒ—å…ˆã«å¤‰æ›´
 						data.DIF = evt.target.innerText;
-						// “ïˆÕ“x•Êƒ}ƒbƒv‚É’Ç‰Á
+						// é›£æ˜“åº¦åˆ¥ãƒãƒƒãƒ—ã«è¿½åŠ 
 						dataMap[evt.target.innerText].push(data);
-						// ‘I‘ğÏ‚Ì“ïˆÕ“x‚Ö’Ç‰Á‚³‚ê‚½ê‡
+						// é¸æŠæ¸ˆã®é›£æ˜“åº¦ã¸è¿½åŠ ã•ã‚ŒãŸå ´åˆ
 						if(evt.target.classList.contains("active")){
-							// ƒNƒŠƒbƒNƒCƒxƒ“ƒg‚ğ”­¶i‚±‚ê‚É‚æ‚è¶•\¦—Ìˆæ‚ğƒŠƒ[ƒhj
+							// ã‚¯ãƒªãƒƒã‚¯ã‚¤ãƒ™ãƒ³ãƒˆã‚’ç™ºç”Ÿï¼ˆã“ã‚Œã«ã‚ˆã‚Šå·¦è¡¨ç¤ºé ˜åŸŸã‚’ãƒªãƒ­ãƒ¼ãƒ‰ï¼‰
 							evt.target.click();
 						}
-					// “ïˆÕ“x•t—^Ï‚Ìƒf[ƒ^‚Ìê‡
+					// é›£æ˜“åº¦ä»˜ä¸æ¸ˆã®ãƒ‡ãƒ¼ã‚¿ã®å ´åˆ
 					}else{
-						// •t—^‚³‚ê‚Ä‚¢‚é“ïˆÕ“x‚ğæ“¾
+						// ä»˜ä¸ã•ã‚Œã¦ã„ã‚‹é›£æ˜“åº¦ã‚’å–å¾—
 						const dif = data.DIF;
-						// “ïˆÕ“xƒ}ƒbƒv‚©‚çŠY“–ƒf[ƒ^‚ğæ“¾
+						// é›£æ˜“åº¦ãƒãƒƒãƒ—ã‹ã‚‰è©²å½“ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 						const mList = dataMap[dif];
-						// ‘Î‰‚·‚éƒf[ƒ^‚ğíœ
+						// å¯¾å¿œã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤
 						for(let i = 0; i < mList.length; i++){
 							if(mList[i].TITLE == data.TITLE && mList[i].SCORE == data.SCORE){
 								mList.splice(i, 1);
 								break;
 							}
 						}
-						// “ïˆÕ“xƒ}ƒbƒv‚Ì“à—e‚ğXVi‘½•ªç’·‚¾‚ª”O‚Ì‚½‚ßj
+						// é›£æ˜“åº¦ãƒãƒƒãƒ—ã®å†…å®¹ã‚’æ›´æ–°ï¼ˆå¤šåˆ†å†—é•·ã ãŒå¿µã®ãŸã‚ï¼‰
 						dataMap[dif] = mList;
-						// ƒhƒ‰ƒbƒOŒ³‚Ìƒf[ƒ^‚Ì“ïˆÕ“x‚Ì‘‚«Š·‚¦
+						// ãƒ‰ãƒ©ãƒƒã‚°å…ƒã®ãƒ‡ãƒ¼ã‚¿ã®é›£æ˜“åº¦ã®æ›¸ãæ›ãˆ
 						data.DIF = evt.target.innerText;
-						// ƒhƒƒbƒvæ‚Ì“ïˆÕ“x‚Ìƒ}ƒbƒv‚É’Ç‰Á
+						// ãƒ‰ãƒ­ãƒƒãƒ—å…ˆã®é›£æ˜“åº¦ã®ãƒãƒƒãƒ—ã«è¿½åŠ 
 						dataMap[evt.target.innerText].push(data);
-						// ¶•\¦—Ìˆæ‚ğƒŠƒ[ƒh
+						// å·¦è¡¨ç¤ºé ˜åŸŸã‚’ãƒªãƒ­ãƒ¼ãƒ‰
 						reloadR();
 					}
 				}
-				// ƒNƒ‰ƒX’Ç‰Á
+				// ã‚¯ãƒ©ã‚¹è¿½åŠ 
 				dv.classList.add("dif");
-				// •\‹Lİ’è
+				// è¡¨è¨˜è¨­å®š
 				dv.innerText = dif;
-				// ƒNƒŠƒbƒNƒCƒxƒ“ƒg’Ç‰Á
+				// ã‚¯ãƒªãƒƒã‚¯ã‚¤ãƒ™ãƒ³ãƒˆè¿½åŠ 
 				dv.onclick = (evt) => {
-					// ‰E•\¦—Ìˆæ‚É‚ ‚é“ïˆÕ“x•\‹L‚ğæ“¾
+					// å³è¡¨ç¤ºé ˜åŸŸã«ã‚ã‚‹é›£æ˜“åº¦è¡¨è¨˜ã‚’å–å¾—
 					const dList = document.getElementById("rArea").getElementsByTagName("div");
-					// ƒAƒNƒeƒBƒuó‘Ô‚ğ‰ğœ
+					// ã‚¢ã‚¯ãƒ†ã‚£ãƒ–çŠ¶æ…‹ã‚’è§£é™¤
 					for(let i = 0; i < dList.length; i++){
 						dList[i].classList.remove("active");
 					}
-					// ƒNƒŠƒbƒN‚³‚ê‚½s‚ğƒAƒNƒeƒBƒu‚É‚·‚é
+					// ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸè¡Œã‚’ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã«ã™ã‚‹
 					evt.target.classList.add("active");
-					// ƒNƒŠƒbƒN‚³‚ê‚½“ïˆÕ“x‚ğæ“¾
+					// ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸé›£æ˜“åº¦ã‚’å–å¾—
 					const dif = evt.target.innerText;
-					// ƒ^ƒCƒgƒ‹‚Ì‘‚«Š·‚¦
+					// ã‚¿ã‚¤ãƒˆãƒ«ã®æ›¸ãæ›ãˆ
 					document.getElementById("lTitle").innerText = dif;
-					// ¶•\¦—Ìˆæ‚ğæ“¾
+					// å·¦è¡¨ç¤ºé ˜åŸŸã‚’å–å¾—
 					const lArea = document.getElementById("lArea");
-					// o—Í“à—e‚ÌƒNƒŠƒA
+					// å‡ºåŠ›å†…å®¹ã®ã‚¯ãƒªã‚¢
 					lArea.innerHTML = null;
-					// “ïˆÕ“x•Êƒ}ƒbƒv‚©‚çƒNƒŠƒbƒN‚³‚ê‚½“ïˆÕ“x‚Ì‹ÈƒŠƒXƒg‚ğæ“¾
+					// é›£æ˜“åº¦åˆ¥ãƒãƒƒãƒ—ã‹ã‚‰ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸé›£æ˜“åº¦ã®æ›²ãƒªã‚¹ãƒˆã‚’å–å¾—
 					const mList = dataMap[evt.target.innerText];
-					// ‹ÈƒŠƒXƒgƒ‹[ƒv
+					// æ›²ãƒªã‚¹ãƒˆãƒ«ãƒ¼ãƒ—
 					for(let i = 0; i < mList.length; i++){
-						// ƒZƒ‹ì¬
+						// ã‚»ãƒ«ä½œæˆ
 						const dv = document.createElement("div");
-						// ‘®«‚È‚Ç‚ğİ’è
+						// å±æ€§ãªã©ã‚’è¨­å®š
 						dv.setAttribute("draggable", true);
 						dv.setAttribute("title", mList[i].TITLE);
 						dv.setAttribute("score", mList[i].SCORE);
-						// CSS—pƒNƒ‰ƒXİ’è
+						// CSSç”¨ã‚¯ãƒ©ã‚¹è¨­å®š
 						dv.classList.add("music");
 						dv.classList.add(mList[i].SCORE);
-						// ƒeƒLƒXƒgİ’è
+						// ãƒ†ã‚­ã‚¹ãƒˆè¨­å®š
 						dv.innerText = mList[i].TITLE + "(" + mList[i].SCORE + ")";
-						// ƒhƒ‰ƒbƒNƒCƒxƒ“ƒg’Ç‰Á
+						// ãƒ‰ãƒ©ãƒƒã‚¯ã‚¤ãƒ™ãƒ³ãƒˆè¿½åŠ 
 						dv.ondragstart = (evt) =>{
-							// ƒhƒ‰ƒbƒOŠJn‚Ì‹““®İ’è
+							// ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹æ™‚ã®æŒ™å‹•è¨­å®š
 						    evt.dataTransfer.effectAllowed = "move";
-						    // ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚ğdataTransfer‚Éİ’è
-						    // ¦JSON‚ğserialize‚µ‚Ä•¶š—ñ‰»‚·‚é
+						    // ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã‚’dataTransferã«è¨­å®š
+						    // â€»JSONã‚’serializeã—ã¦æ–‡å­—åˆ—åŒ–ã™ã‚‹
 							evt.dataTransfer.setData("text/plain", 
 								JSON.stringify({
 									DIF:dif,
@@ -198,45 +199,45 @@
 								})
 							);
 						}
-						// ¶•\¦—Ìˆæ‚É‹È‚ğ’Ç‰Á
+						// å·¦è¡¨ç¤ºé ˜åŸŸã«æ›²ã‚’è¿½åŠ 
 						lArea.appendChild(dv);
 					}
 				}
-				// ‰E•\¦—Ìˆæ‚É’Ç‰Á
+				// å³è¡¨ç¤ºé ˜åŸŸã«è¿½åŠ 
 				rArea.appendChild(dv);
 			}
-			// –¢ŒˆƒŠƒXƒg‚Ì•`‰æ
+			// æœªæ±ºãƒªã‚¹ãƒˆã®æç”»
 			setUnclassedData();
-			// æ“ª‚ğƒNƒŠƒbƒN‚·‚é
+			// å…ˆé ­ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹
 			document.getElementById("rArea").getElementsByTagName("div")[0].click();
 		}
 		/**
-		 * –¢ŒˆƒŠƒXƒg•`‰æ
+		 * æœªæ±ºãƒªã‚¹ãƒˆæç”»
 		 */
 		function setUnclassedData(){
-			// ’†‰›ƒGƒŠƒA‚Ì•\¦—Ìˆææ“¾
+			// ä¸­å¤®ã‚¨ãƒªã‚¢ã®è¡¨ç¤ºé ˜åŸŸå–å¾—
 			const mArea = document.getElementById("mArea");
-			// •\¦“à—e‚ğƒNƒŠƒA
+			// è¡¨ç¤ºå†…å®¹ã‚’ã‚¯ãƒªã‚¢
 			mArea.innerHTML = null;
-			// –¢ŒˆƒŠƒXƒgƒ‹[ƒv
+			// æœªæ±ºãƒªã‚¹ãƒˆãƒ«ãƒ¼ãƒ—
 			for(let i = 0; i < unClassedData.length; i++){
-				// ƒZƒ‹ì¬
+				// ã‚»ãƒ«ä½œæˆ
 				const dv = document.createElement("div");
-				// ‘®«‚È‚Ç‚ğİ’è
+				// å±æ€§ãªã©ã‚’è¨­å®š
 				dv.setAttribute("draggable", true);
 				dv.setAttribute("title", unClassedData[i].TITLE);
 				dv.setAttribute("score", unClassedData[i].SCORE);
-				// CSS—pƒNƒ‰ƒXİ’è
+				// CSSç”¨ã‚¯ãƒ©ã‚¹è¨­å®š
 				dv.classList.add("music");
 				dv.classList.add(unClassedData[i].SCORE);
-				// •\‹Lİ’è
+				// è¡¨è¨˜è¨­å®š
 				dv.innerText = unClassedData[i].TITLE + "(" + unClassedData[i].SCORE + ")";
-				// ƒhƒ‰ƒbƒOŠJnƒCƒxƒ“ƒg’Ç‰Á
+				// ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹æ™‚ã‚¤ãƒ™ãƒ³ãƒˆè¿½åŠ 
 				dv.ondragstart = (evt) =>{
-					// ƒhƒ‰ƒbƒOŠJn‚Ì‹““®İ’è
+					// ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹æ™‚ã®æŒ™å‹•è¨­å®š
 				    evt.dataTransfer.effectAllowed = "move";
-				    // ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚ğdataTransfer‚Éİ’è
-				    // ¦JSON‚ğserialize‚µ‚Ä•¶š—ñ‰»‚·‚é
+				    // ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã‚’dataTransferã«è¨­å®š
+				    // â€»JSONã‚’serializeã—ã¦æ–‡å­—åˆ—åŒ–ã™ã‚‹
 					evt.dataTransfer.setData("text/plain", 
 						JSON.stringify({
 							DIF:"",
@@ -245,94 +246,94 @@
 						})
 					);
 				}
-				// ’†‰›•\¦—Ìˆæ‚Ö’Ç‰Á
+				// ä¸­å¤®è¡¨ç¤ºé ˜åŸŸã¸è¿½åŠ 
 				mArea.appendChild(dv);
 			}
 		}
 		/**
-		 * ‰E•\¦—Ìˆæ‚ğƒŠƒ[ƒh
+		 * å³è¡¨ç¤ºé ˜åŸŸã‚’ãƒªãƒ­ãƒ¼ãƒ‰
 		 */
 		function reloadR(){
-			// ¶•\¦—Ìˆææ“¾
+			// å·¦è¡¨ç¤ºé ˜åŸŸå–å¾—
 			const rArea = document.getElementById("rArea");
-			// “ïˆÕ“x•ÊƒŠƒXƒgæ“¾
+			// é›£æ˜“åº¦åˆ¥ãƒªã‚¹ãƒˆå–å¾—
 			const rList = rArea.getElementsByTagName("div");
-			// ƒŠƒXƒgƒ‹[ƒv
+			// ãƒªã‚¹ãƒˆãƒ«ãƒ¼ãƒ—
 			for(let i = 0; i < rList.length; i++){
-				// ƒAƒNƒeƒBƒu‚ÈƒZƒ‹‚Ìê‡
+				// ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªã‚»ãƒ«ã®å ´åˆ
 				if(rList[i].classList.contains("active")){
-					// ƒNƒŠƒbƒN¨¶•\¦—Ìˆæ‚ªƒŠƒZƒbƒg‚³‚ê‚é
+					// ã‚¯ãƒªãƒƒã‚¯â†’å·¦è¡¨ç¤ºé ˜åŸŸãŒãƒªã‚»ãƒƒãƒˆã•ã‚Œã‚‹
 					rList[i].click();
 				}
 			}
 		}
 		/**
-		 * ƒhƒ‰ƒbƒO’†ƒCƒxƒ“ƒg
-		 * ¦evetn.preventDefault—p
+		 * ãƒ‰ãƒ©ãƒƒã‚°ä¸­ã‚¤ãƒ™ãƒ³ãƒˆ
+		 * â€»evetn.preventDefaultç”¨
 		 */
 		function dragoverHandler(){
 			event.preventDefault();
 			event.dataTransfer.dropEffect = "move";
 		}
 		/**
-		 * –¢ŒˆƒŠƒXƒg—Ìˆæ‚Ö‚Ìƒhƒƒbƒv‚ÌƒCƒxƒ“ƒg
+		 * æœªæ±ºãƒªã‚¹ãƒˆé ˜åŸŸã¸ã®ãƒ‰ãƒ­ãƒƒãƒ—æ™‚ã®ã‚¤ãƒ™ãƒ³ãƒˆ
 		 */
 		function dropUnclassedHandler(){
-			// ƒfƒtƒHƒ‹ƒg‹““®‚ğ—}§
+			// ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆæŒ™å‹•ã‚’æŠ‘åˆ¶
 			event.preventDefault();
-			// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚Ìæ“¾
+			// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã®å–å¾—
 			const data = JSON.parse(event.dataTransfer.getData("text/plain"));
-			// –¢Œˆƒf[ƒ^‚Å‚È‚¢ê‡@¦–¢Œˆ¨–¢Œˆ‚É‚Â‚¢‚Ä‚Í‰½‚à‚µ‚È‚¢
+			// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã§ãªã„å ´åˆã€€â€»æœªæ±ºâ†’æœªæ±ºã«ã¤ã„ã¦ã¯ä½•ã‚‚ã—ãªã„
 			if(data.DIF != ""){
-				// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚Ì“ïˆÕ“x‚ğæ“¾
+				// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã®é›£æ˜“åº¦ã‚’å–å¾—
 				const dif = data.DIF;
-				// ƒ}ƒbƒv‚©‚ç‘Î‰‚·‚é‹ÈƒŠƒXƒg‚ğæ“¾
+				// ãƒãƒƒãƒ—ã‹ã‚‰å¯¾å¿œã™ã‚‹æ›²ãƒªã‚¹ãƒˆã‚’å–å¾—
 				const mList = dataMap[dif];
-				// ƒŠƒXƒgƒ‹[ƒv
+				// ãƒªã‚¹ãƒˆãƒ«ãƒ¼ãƒ—
 				for(let i = 0; i < mList.length; i++){
-					// ‘Î‰‚·‚éƒf[ƒ^‚Ìê‡
+					// å¯¾å¿œã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã®å ´åˆ
 					if(mList[i].TITLE == data.TITLE && mList[i].SCORE == data.SCORE){
-						// íœ
+						// å‰Šé™¤
 						mList.splice(i, 1);
-						// ˆÈŒãˆ—•s—v
+						// ä»¥å¾Œå‡¦ç†ä¸è¦
 						break;
 					}
 				}
-				// “ïˆÕ“xƒ}ƒbƒv‚ÌXV
+				// é›£æ˜“åº¦ãƒãƒƒãƒ—ã®æ›´æ–°
 				dataMap[dif] = mList;
-				// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^‚Ì“ïˆÕ“x‚ğ–¢Œˆ‚É‚·‚é
+				// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿ã®é›£æ˜“åº¦ã‚’æœªæ±ºã«ã™ã‚‹
 				data.DIF = "";
-				// –¢Œˆƒf[ƒ^ƒŠƒXƒg‚É’Ç‰Á
+				// æœªæ±ºãƒ‡ãƒ¼ã‚¿ãƒªã‚¹ãƒˆã«è¿½åŠ 
 				unClassedData.push(data);
-				// –¢Œˆ•\¦‚ÌÄ•`‰æ
+				// æœªæ±ºè¡¨ç¤ºã®å†æç”»
 				setUnclassedData();
-				// ¶•\¦—Ìˆæ‚ÌXV
+				// å·¦è¡¨ç¤ºé ˜åŸŸã®æ›´æ–°
 				reloadR();
 			}
 		}
 		/**
-		 * ¶•\¦—Ìˆæ‚Ö‚Ìƒhƒƒbƒv‚ÌƒCƒxƒ“ƒg
+		 * å·¦è¡¨ç¤ºé ˜åŸŸã¸ã®ãƒ‰ãƒ­ãƒƒãƒ—æ™‚ã®ã‚¤ãƒ™ãƒ³ãƒˆ
 		 */
 		function dropClassedHandler(){
-			// ƒhƒ‰ƒbƒOŒ³ƒf[ƒ^æ“¾
+			// ãƒ‰ãƒ©ãƒƒã‚°å…ƒãƒ‡ãƒ¼ã‚¿å–å¾—
 			const data = JSON.parse(event.dataTransfer.getData("text/plain"));
-			// –¢Œˆƒf[ƒ^‚©‚ç‚Ìƒhƒ‰ƒbƒO•ƒhƒƒbƒv
-			// ¦Še“ïˆÕ“x‚©‚ç‚Ìƒhƒƒbƒv‚É‚Â‚¢‚Ä‚Í‰½‚à‚·‚é•K—v‚È‚µ
+			// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ã®ãƒ‰ãƒ©ãƒƒã‚°ï¼†ãƒ‰ãƒ­ãƒƒãƒ—
+			// â€»å„é›£æ˜“åº¦ã‹ã‚‰ã®ãƒ‰ãƒ­ãƒƒãƒ—ã«ã¤ã„ã¦ã¯ä½•ã‚‚ã™ã‚‹å¿…è¦ãªã—
 			if(data.DIF == ""){
-				// –¢Œˆƒf[ƒ^‚©‚çƒhƒ‰ƒbƒO‚³‚ê‚½ƒf[ƒ^‚ğíœ
+				// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ãƒ‰ãƒ©ãƒƒã‚°ã•ã‚ŒãŸãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤
 				for(let i = 0; i < unClassedData.length; i++){
 					if(unClassedData[i].TITLE == data.TITLE && unClassedData[i].SCORE == data.SCORE){
 						unClassedData.splice(i, 1);
 						break;
 					}
 				}
-				// –¢Œˆƒf[ƒ^‚Ì•\¦XV
+				// æœªæ±ºãƒ‡ãƒ¼ã‚¿ã®è¡¨ç¤ºæ›´æ–°
 				setUnclassedData();
-				// ƒhƒƒbƒvæ‚Ì“ïˆÕ“x‚É•ÏX
+				// ãƒ‰ãƒ­ãƒƒãƒ—å…ˆã®é›£æ˜“åº¦ã«å¤‰æ›´
 				data.DIF = document.getElementById("lTitle").innerText;
-				// “ïˆÕ“x•\ƒ}ƒbƒv‚Ö’Ç‰Á
+				// é›£æ˜“åº¦è¡¨ãƒãƒƒãƒ—ã¸è¿½åŠ 
 				dataMap[evt.target.innerText].push(data);
-				// ¶•\¦—Ìˆæ‚ÌƒŠƒ[ƒh
+				// å·¦è¡¨ç¤ºé ˜åŸŸã®ãƒªãƒ­ãƒ¼ãƒ‰
 				reloadR();
 			}
 		}
@@ -351,14 +352,14 @@
 				<div id="lArea" style="height:calc(100vh - 4em);overflow-y:scroll;" ondrop="dropClassedHandler();"></div>
 			</div>
 			<div style="width:35%;" ondragover="dragoverHandler();" ondrop="dropUnclassedHandler();">
-				<div class="header">–¢Œˆ</div>
+				<div class="header">æœªæ±º</div>
 				<div id="mArea" style="height:calc(100vh - 4em);overflow-y:scroll;"></div>
 			</div>
 			<div style="width:28%;">
 				<div id="rArea">
 				</div>
 				<div style="width:100%;text-align:center;padding-top:8px;">
-					<button type="button" onclick="save();" style="font-size:1.3em;background-color:white;border-radius:8px;width:4em;">•Û‘¶</button>
+					<button type="button" onclick="save();" style="font-size:1.3em;background-color:white;border-radius:8px;width:4em;">ä¿å­˜</button>
 				</div>
 			</div>
 		</div>
