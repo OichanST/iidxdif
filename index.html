@@ -176,6 +176,7 @@
 					for(let i = 0; i < mList.length; i++){
 						// セル作成
 						const dv = document.createElement("div");
+						dv.style = "display:flex;justify-content:space-between;";
 						// 属性などを設定
 						dv.setAttribute("draggable", true);
 						dv.setAttribute("title", mList[i].TITLE);
@@ -184,7 +185,7 @@
 						dv.classList.add("music");
 						dv.classList.add(mList[i].SCORE);
 						// テキスト設定
-						dv.innerText = mList[i].TITLE + "(" + mList[i].SCORE + ")";
+						dv.innerHTML = "<div>" + mList[i].TITLE + "</div><div style='margin-right:0.5em;'>" + mList[i].SCORE + "</div>";
 						// ドラックイベント追加
 						dv.ondragstart = (evt) =>{
 							// ドラッグ開始時の挙動設定
@@ -223,6 +224,7 @@
 			for(let i = 0; i < unClassedData.length; i++){
 				// セル作成
 				const dv = document.createElement("div");
+				dv.style = "display:flex;justify-content:space-between;";
 				// 属性などを設定
 				dv.setAttribute("draggable", true);
 				dv.setAttribute("title", unClassedData[i].TITLE);
@@ -231,7 +233,7 @@
 				dv.classList.add("music");
 				dv.classList.add(unClassedData[i].SCORE);
 				// 表記設定
-				dv.innerText = unClassedData[i].TITLE + "(" + unClassedData[i].SCORE + ")";
+				dv.innerHTML = "<div>" + unClassedData[i].TITLE + "</div><div style='margin-right:0.5em;'>" + unClassedData[i].SCORE + "</div>";
 				// ドラッグ開始時イベント追加
 				dv.ondragstart = (evt) =>{
 					// ドラッグ開始時の挙動設定
