@@ -1,19 +1,33 @@
-#lArea,#mArea{
+body{
+	margin:0px;
+	padding:0px;
+}
+#lArea{
 	height:calc(100vh - 6.2em);
+	background-color:#151515;
 	overflow-y:scroll;
 }
 #rArea{
 	height:calc(100vh - 4.6em);
+	background-color:#151515;
+	overflow-y:scroll;
+}
+#mArea{
+	height:calc(100vh - 6.2em);
+	background-color:#151515;
 	overflow-y:scroll;
 }
 .dif{
 	cursor:pointer;
+	font-weight:bold;
+	-webkit-text-stroke:1px rgba(0, 128, 255, 0.3);
 	font-size:1.3em;
 	margin:3px;
 	padding:3px 10px 3px 10px;
 	text-align:center;
 	border:1px solid black;
 	border-radius:5px;
+	background:rgba(255, 255, 255, 0.8);
 }
 .dif:not(.active):hover{
 	background-color:#FFFFD0;
@@ -27,8 +41,20 @@
 .header{
 	text-align:center;
 	font-weight:bold;
+	-webkit-text-stroke:1px rgba(0, 128, 255, 0.3);
 	font-size:1.2em;
-	border-bottom:1px solid #D0D0D0;
+	border-bottom:1px solid #C0C0C0;
+	background-color:#D0D0D0;
+}
+.footer{
+	display:sticky;
+	bottom:0px;
+	width:100%;
+	text-align:center;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	border-top:1px solid #C0C0C0;
+	background-color:#D0D0D0;
 }
 .music{
 	font-size:1.1em;
@@ -38,7 +64,7 @@
 	cursor:pointer;
 	text-shadow:
 	  1px 1px 0 black;
-	background:rgba(200, 200, 200, 0.25);
+	background:rgba(255, 255, 255, 0.8);
 }
 .HYPER{
 	color:#fFFF00;

@@ -9,21 +9,21 @@
 	</head>
 	<body onload="init();" style="user-select:none;">
 		<div style="display:flex;justify-content:flex-start;">
-			<div style="width:40%;">
+			<div style="width:50%;">
 				<div id="lTitle" class="header"></div>
 				<div id="lArea" ondragover="dragoverHandler();" ondrop="dropClassedHandler();"></div>
 			</div>
-			<div style="width:18%;">
+			<div style="width:20em;">
 				<div id="rArea">
 				</div>
 			</div>
-			<div style="width:40%;" ondragover="dragoverHandler();" ondrop="dropUnclassedHandler();">
+			<div style="width:50%;" ondragover="dragoverHandler();" ondrop="dropUnclassedHandler();">
 				<div class="header">不明</div>
 				<div id="mArea"></div>
 			</div>
 		</div>
-		<div style="display:sticky;bottom:0px;width:100%;text-align:center;padding-top:0.5em;padding-bottom:0.5em;border-top:1px solid #D0D0D0;">
-			<button type="button" onclick="save();" style="font-size:1.3em;background-color:white;border-radius:8px;width:4em;font-weight:bold;background-color:#F0FAFF;">保存</button>
+		<div class="footer">
+			<button type="button" onclick="save();" style="cursor:pointer;font-size:1.3em;border-radius:8px;width:4em;font-weight:bold;color:white;background-color:#00A0FF;">保存</button>
 		</div>
 	</body>
 </html>
