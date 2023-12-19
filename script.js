@@ -54,7 +54,8 @@ function init(){
 		// 難易度セル作成
 		const dv = document.createElement("div");
 		// ドラッグ開始時イベント追加
-		dv.ondragover = dragoverHandler;
+		dv.ondragover = dragoverHandlerSP;
+		dv.ondragleave = dragleaveHandler;
 		// ドロップイベント追加
 		dv.ondrop = (evt) => {
 			// デフォルト動作の抑制
@@ -246,8 +247,28 @@ function reloadR(){
  * ※evetn.preventDefault用
  */
 function dragoverHandler(){
+
 	event.preventDefault();
+	
 	event.dataTransfer.dropEffect = "move";
+}
+/**
+ * ドラッグ中イベント
+ * ※各難易度にドラッグした際に対象の背景色を変更する
+ */
+function dragoverHandlerSP(){
+	// 通常のドラッグ中イベント実行
+	dragoverHandler();
+	// クラス適用
+	event.target.classList.add("hov");
+}
+/**
+ * ドラッグが外れた際のイベント
+ * ※ドラッグした際に変更した背景色を戻す
+ */
+function dragleaveHandler(){
+	// クラス除外
+	event.target.classList.remove("hov");
 }
 /**
  * 未決リスト領域へのドロップ時のイベント
