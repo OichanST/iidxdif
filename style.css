@@ -1,0 +1,44 @@
+#lArea,#mArea{
+	height:calc(100vh - 6.2em);
+	overflow-y:scroll;
+}
+#rArea{
+	height:calc(100vh - 4.6em);
+	overflow-y:scroll;
+}
+.dif{
+	cursor:pointer;
+	font-size:1.4em;
+	margin:3px;
+	padding:3px 10px 3px 10px;
+	text-align:center;
+	border:1px solid black;
+	border-radius:5px;
+}
+.active{
+	background-color:yellow;
+}
+.header{
+	text-align:center;
+	font-weight:bold;
+	font-size:1.2em;
+}
+.music{
+	font-size:1.1em;
+	margin:3px;
+	padding:3px 0px 3px 8px;
+	border:1px solid black;
+	cursor:pointer;
+	text-shadow:
+	  1px 1px 0 black;
+	background:rgba(200, 200, 200, 0.25);
+}
+.HYPER{
+	color:#fFFF00;
+}
+.ANOTHER{
+	color:#FF0000;
+}
+.LEGGENDARIA{
+	color:#FF00FF;
+}
