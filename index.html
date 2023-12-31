@@ -22,8 +22,23 @@
 				<div id="mArea"></div>
 			</div>
 		</div>
+		<div id="searchResult" style="border:2px solid #505050;display:none;position:absolute;bottom:4.4em;background-color:#D0D0D0;width:50vw;padding:0.2em;">
+			<div style="display:flex;justify-content:flex-end;" onclick="document.getElementById('searchResult').style.display='none';">
+				<div style="cursor:pointer;border-radius:4px;padding-left:0.2em;padding-right:0.2em;font-size:1.1em;background-color:white;">×</div>
+			</div>
+			<table id="resultList" style="width:100%;font-size:1.1em;"></table>
+		</div>
 		<div class="footer">
-			<button type="button" onclick="save();" style="cursor:pointer;font-size:1.3em;border-radius:8px;width:4em;font-weight:bold;color:white;background-color:#00A0FF;">保存</button>
+			<div style="display:flex;justify-content:space-between;padding-left:0.5em;padding-right:0.5em;">
+				<div>
+					<span style="font-size:1.2em;">曲名検索</span>&nbsp;<input id="searchCond" type="text" style="width:20em;font-size:1.2em;">
+					<button type="button" onclick="search();" style="width:4em;">検索</button>
+				</div>
+				<div>
+					<button type="button" onclick="restore();" style="width:6em;">やり直す</button>
+					<button type="button" onclick="outputData();" style="width:8em;">これでOK!</button>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
