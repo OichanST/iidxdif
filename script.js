@@ -3,18 +3,24 @@ var dataMap;
 // 難易度未決データリスト
 var unClassedData;
 
+var alias
 /**
  * 初期表示処理
  */
-function init(){
+function init(argAlias){
+
+	alias = argAlias;
 	// 難易度別マップをローカルストレージから取得
-	dataMap = localStorage.getItem("dataMap");
+	dataMap = localStorage.getItem("dataMap" + alias);
 	// 難易度未決データリストをローカルストレージから取得
-	unClassedData = localStorage.getItem("unClassedData");
+	unClassedData = localStorage.getItem("unClassedData" + alias);
 	// 取得できなかった場合
 	if(!dataMap && !unClassedData){
 		// 難易度別マップの初期化
 		dataMap = {};
+		// 枠追加
+		dataMap["地力SS"] = new Array();
+		dataMap["個人差SS"] = new Array();
 		// 難易度未決データリストを初期化
 		unClassedData = new Array();
 		// 曲データを難易度に振り分け
@@ -27,6 +33,10 @@ function init(){
 				unClassedData.push(data);
 			// それ以外
 			}else{
+				if(data.DIF == "地力C"){
+					dataMap["自力C+"] = new Array();
+					dataMap["個人差C+"] = new Array();
+				}
 				// マップ初期化
 				if(!dataMap[data.DIF]){
 					dataMap[data.DIF] = new Array();
@@ -369,17 +379,17 @@ function dropClassedHandler(){
  */
 function save(){
 	// 難易度別マップをローカルストレージに保存
-	localStorage.setItem("dataMap", JSON.stringify(dataMap));
+	localStorage.setItem("dataMap" + alias, JSON.stringify(dataMap));
 	// 難易度未決リストをローカルストレージに保存
-	localStorage.setItem("unClassedData", JSON.stringify(unClassedData));
+	localStorage.setItem("unClassedData" + alias, JSON.stringify(unClassedData));
 }
 /**
  * やり直し
  */
 function restore(){
 	if(confirm("今までの編集内容を無かったことにします。本当によろしいですか？")){
-		localStorage.removeItem("dataMap");
-		localStorage.removeItem("unClassedData");
+		localStorage.removeItem("dataMap" + alias);
+		localStorage.removeItem("unClassedData" + alias);
 		init();
 	}
 }
