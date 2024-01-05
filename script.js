@@ -34,7 +34,7 @@ function init(argAlias){
 			// それ以外
 			}else{
 				if(data.DIF == "地力C"){
-					dataMap["自力C+"] = new Array();
+					dataMap["地力C+"] = new Array();
 					dataMap["個人差C+"] = new Array();
 				}
 				// マップ初期化
